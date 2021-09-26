@@ -25,13 +25,34 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>  
+            <script>
+            // javascript for more algorithmic functionality
+            function ClickHandler() {
+                $('#list').append("<li>lorem ipsum </li>");
+            }
+            $(document).ready(function() {
+                //use this to make sure document is loaded before function
+                $('button').click(ClickHandler);
+                $("span").text(function() {
+                    let result = $(this).text();
+                    for (var i = 0; i < 4; i++) {
+                        result += String.fromCharCode(Math.floor(Math.random() * 26) + 96);
+                    }
+                    return result;
+                });
+
+            });
+            </script>  
     </head>
     <body>
+
             <h1>
                 Chandan Chandel
                 <a href="" target="__self">(Chun-Thun  Chun-thale)</a>
             </h1>
-                <ol type="1" style="border:1px solid #000";>
+             <button>More!</button>
+                <ol id ="list" type="1" style="border:1px solid #000";>
                     <li>
                         React.js 
                     </li>
