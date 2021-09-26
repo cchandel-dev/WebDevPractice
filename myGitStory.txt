@@ -1,0 +1,55 @@
+12267@LAPTOP-A332EC11 MINGW64 ~/gitstorage/Web Dev 1 (master)
+$ git reflog
+05e3366 (HEAD -> master) HEAD@{0}: commit (merge): my merged version
+ee12504 (seperateCSS) HEAD@{1}: merge seperateCSS: Fast-forward
+1355ef5 HEAD@{2}: checkout: moving from seperateCSS to master
+ee12504 (seperateCSS) HEAD@{3}: commit: broke out CSS properly
+cd1d89c HEAD@{4}: checkout: moving from master to seperateCSS
+1355ef5 HEAD@{5}: checkout: moving from seperateJS to master
+75eb61a (seperateJS) HEAD@{6}: commit: Broke out the JS
+1355ef5 HEAD@{7}: checkout: moving from master to seperateJS
+1355ef5 HEAD@{8}: checkout: moving from seperateCSS to master
+cd1d89c HEAD@{9}: commit: Broke out the CSS
+1355ef5 HEAD@{10}: checkout: moving from master to seperateCSS
+1355ef5 HEAD@{11}: commit: Chandan Swaraj.html does it all
+5762888 HEAD@{12}: commit: used internal CSS to style Chandan Swaraj.html
+bb863c0 HEAD@{13}: commit: added stuff about web technologies
+977022d HEAD@{14}: commit (initial): hello Chandan Swaraj
+---------------------------------------------------------------
+Note: that Head 3 shows that I went back to correct a mistake in the seperate CSS branch.
+All git history in this local repository is shown through the git reflog command.
+---------------------------------------------------------------
+Merge the separateCSS branch, why was that easy?
+	> It was very easy because there were no merge conflicts.
+Merge separateJS, what makes this more difficult?
+	> It was more difficult, because there was a merge conflict.
+	A merge conflict occurred in this case because two branches have changed the 
+	same line of code, this can include a branch removing a file that is still seen
+	on another branch.
+---------------------------------------------------------------
+12267@LAPTOP-A332EC11 MINGW64 ~/gitstorage/Web Dev 1 (master)
+$ git log --all
+commit 05e3366ea27c5499ab25257b802a1ba26a8585e3 (HEAD -> master)
+Merge: ee12504 75eb61a
+Author: Chandan Chandel <76410929+cchandel-dev@users.noreply.github.com>
+Date:   Sun Sep 26 18:52:56 2021 -0400
+
+    my merged version
+
+commit ee125047ed3c57289dbbeff1b6da3e4b84241f69 (seperateCSS)
+Author: Chandan Chandel <76410929+cchandel-dev@users.noreply.github.com>
+Date:   Sun Sep 26 18:21:02 2021 -0400
+
+    broke out CSS properly
+
+commit 75eb61a012d7ca09178a75df8e9024ddde9cbf68 (seperateJS)
+Author: Chandan Chandel <76410929+cchandel-dev@users.noreply.github.com>
+Date:   Sun Sep 26 18:15:24 2021 -0400
+
+    Broke out the JS
+
+commit cd1d89c3dd1f38955d0481a19ea38cd97100e310
+Author: Chandan Chandel <76410929+cchandel-dev@users.noreply.github.com>
+Date:   Sun Sep 26 18:10:14 2021 -0400
+
+
