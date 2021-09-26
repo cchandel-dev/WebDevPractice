@@ -1,0 +1,22 @@
+         <style>
+            *{
+                font-family: sans-serif;
+                foreground-color: "MidnightBlue";
+                background-color: "black";
+            }
+            h1 {
+                font-family: 'Poller One', cursive;
+            }
+
+            h2 {
+                font-family: 'Poller One', cursive;
+            }
+
+            h3 {
+                font-family: 'Poller One', cursive;
+            }
+            .tech {
+                font-family: 'monospace';
+                font-size: 1.5em;
+            }
+          </style>
